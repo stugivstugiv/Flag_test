@@ -1,0 +1,166 @@
+#map {
+    width: calc(100vw - (395px));
+    height: 100vh;
+    float: right;
+}
+
+.baloon_body {
+    width: 100%;
+    height: 100%;
+}
+
+.side_info {
+    height: 100%;
+    width: 395px;
+    background-color: #fafafa;
+    position: absolute;
+    z-index: 10;
+}
+.side_info .buttons{
+    margin: 0;
+}
+.side_info .cst-buttons{
+    padding: 12px 0;
+    text-align: center;
+    border: 1px solid rgba(100,100,100,0.6);
+    background-color: white;
+    color: rgb(150,150,150);
+}
+.side_info .cst-buttons[is_active=true]{
+    background-color: #ff9e00;
+    color: white;
+    border: none;
+}
+
+#accordion {
+    width: 100%;
+    display: block;
+    position: relative;
+    max-height: 90vh;
+    /*overflow-y: scroll;*/
+}
+
+#accordion h2 {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin: 0;
+    padding: 28px 24px;
+    cursor: pointer;
+    color: #214d73;
+    transition: all ease-in-out 0.28s;
+}
+
+#accordion > ul {
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+}
+
+#accordion li{
+    border-top: 1px solid rgba(100, 100, 100, 0.2);
+}
+#accordion li:last-child{
+    border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+}
+
+.inside_value {
+    position: relative;
+    overflow: hidden;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+#accordion ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#accordion ul li i {
+    position: absolute;
+    margin-top: 32px;
+    right: 48px;
+}
+
+#accordion ul li i:before, #accordion ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: #214d73;
+    width: 3px;
+    height: 11px;
+}
+#accordion ul li:hover h2{
+    color: #ff9e00;
+}
+#accordion ul li:hover i:before{
+    background-color: #ff9e00;
+}
+#accordion ul li:hover i:after{
+    background-color: #ff9e00;
+}
+
+#accordion ul li i:before {
+    transform: translate(-3px, 0) rotate(45deg);
+}
+
+#accordion ul li i:after {
+    transform: translate(3px, 0) rotate(-45deg);
+}
+
+#accordion ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    user-select: none;
+    padding: 0;
+    opacity: 0;
+}
+
+#accordion ul li input[type=checkbox]:checked ~ .inside_value {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+}
+
+#accordion ul li input[type=checkbox]:checked ~ i:before {
+    transform: translate(3px, 0) rotate(45deg);
+}
+
+#accordion ul li input[type=checkbox]:checked ~ i:after {
+    transform: translate(-3px, 0) rotate(-45deg);
+}
+
+.inside_value, #accordion li i:before, #accordion li i:after {
+    transition: all ease-in-out 0.3s;
+}
+
+.inside_value > div{
+    padding-left: 24px;
+    padding-right: 28px;
+    padding-bottom: 38px;
+}
+.inside_value h3{
+    color: #214d73;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease-in-out 0.12s;
+    margin-bottom: 10px;
+}
+.inside_value h3:hover{
+    text-shadow: 1px 1px 2px rgba(150,150,200,0.2);
+}
+.inside_value p{
+    margin-bottom: 10px;
+}
+.inside_value p, .inside_value a{
+    font-size: 15px;
+}
+#accordion > div.stock{
+    padding: 12px 24px;
+    text-align: center;
+    font-weight: bold;
+}

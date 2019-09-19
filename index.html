@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jQuery.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="js.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=08acf64e-5792-4423-a84d-5a53cfeb0372&lang=ru_RU" type="text/javascript"></script>
+    <title>Test Kozitsyn</title>
+</head>
+<body>
+    <div class="side_info">
+        <div class="row buttons">
+            <button class="cst-buttons country-btn col-md-6" data-country="rus" is_active='false' type="button">Россия</button>
+            <button class="cst-buttons country-btn col-md-6" data-country="bel" is_active='false' type="button">Белоруссия</button>
+        </div>
+        <div id="accordion">
+            <div class="stock">Выберите страну</div>
+        </div>
+    </div>
+    <div id="map"></div>
+</body>
+</html>
